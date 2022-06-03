@@ -13,7 +13,7 @@ class Program
 		}
 		// Open the manifest
 		using StreamReader input = new(args[0]);
-		using StreamWriter missingFilesOutput = new(args[0] + "-missing.txt");
+		using StreamWriter missingFilesOutput = new(Path.GetFileNameWithoutExtension(args[0]) + "-bad.txt");
 		// Read until we reach the files section
 		string? line;
 		while (true)
